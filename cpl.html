@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Playlist</title>
+    <style>
+
+        .songb{
+            height: 150px;
+        }
+        .icons i{
+    cursor: pointer;
+    margin-top: 12px;
+    color: white;
+}
+    .bottom{
+    position: sticky;
+    height: 80px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#MyPB{
+    width: 580px;
+    color: white;
+    accent-color: purple;
+
+    
+}
+        .cc{
+            max-height: 50%;
+            width: 100%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+
+        }
+
+        .song-list {
+            list-style: none;
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .song {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            background-color: rgb(199, 58, 199);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .song:hover {
+            transform: scale(1.05);
+        }
+
+        .song img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .song-info {
+            padding: 10px;
+            text-align: center;
+            color: white;
+            background-color: black;
+        }
+
+        h2, p {
+            font-size: 10px;
+            margin: 0;
+            color: white;
+        }
+        nav{
+    font-family: 'Abel', sans-;
+    padding-bottom: 10px;
+
+
+
+
+}
+
+.tt{
+    padding-left: 50px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 15;
+    padding-right: 10px;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    color: black;
+}
+.brand img{
+    width: 60px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+#masterPlay{
+    cursor: pointer;
+}
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+a:hover{
+    color: blueviolet;
+}
+.search-container{
+  float: right;
+  margin-top: 1px;
+
+}
+
+.search-container button{
+  float: right;
+  padding: 6px 10px;
+  margin-top: 1px;
+  margin-right: 5px;
+  margin-left: 5px;
+  background: #8014b2;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+
+}
+
+.search-container button:hover {
+  background: #fdfdfd;
+}
+
+input[type=text] {
+  padding: 6px;
+  margin-top: 1px;
+  font-size: 17px;
+  margin-left: 1020px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+}
+    </style>
+</head>
+<body background="/Volumes/HargunSD/bbb.jpeg">
+    <nav>
+        <ul>
+            <li class="brand"><img src="logof.png" alt="MusicO">MusicO</li>
+
+      <a href="/Users/hargundeepsingh/vscode/nav.html"><i class="fa-solid fa-house"></i></a>
+      <div class="search-container">
+        <form action="">
+          <input type="text" placeholder="Search.." name="search" id="searchInput">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+        </ul>
+        
+    </nav>
+    <div class="tt">Car Playlist</div>
+  <div class="cc">
+    <ul class="song-list" id="songsls">
+        <li class="song" id="Excuses">
+            <img src="/Volumes/HargunSD/pics/exc.png" alt="Song 1">
+            <div class="song-info">
+                <h2>Excuses </h2>
+                <p>AP Dhillion <i class="fa-regular fa-circle-play"></i></p>
+            </div>
+        </li>
+        
+        <li class="song" id="Brown Munde">
+            <img src="/Volumes/HargunSD/pics/bm.png" alt="Song 2">
+            <div class="song-info">
+                <h2>Brown Munde</h2>
+                <p>AP Dhillion<i class="fa-regular fa-circle-play"></i></p>
+            </div>
+        </li>
+
+        <li class="song" id="Most Wanted">
+            <img src="/Volumes/HargunSD/pics/mw.png" alt="Song 2">
+            <div class="song-info">
+                <h2>Most Wanted</h2>
+                <p>AP Dhillion <i class="fa-regular fa-circle-play"></i></p>
+            </div>
+        </li>
+        <li class="song" id="Arrogant">
+            <img src="/Volumes/HargunSD/pics/ar.png" alt="Song 2">
+            <div class="song-info">
+                <h2>Arrogant</h2>
+                <p>AP Dhillion<i class="fa-regular fa-circle-play"></i></p>
+            </div>
+        </li>
+        <li class="song" id="Dhakka">
+            <img src="/Volumes/HargunSD/pics/ds.png" alt="Song 2">
+            <div class="song-info">
+                <h2>Dhakka</h2>
+                <p>Sidhu Moose Wala <i class="fa-regular fa-circle-play" ></i></p>
+            </div>
+        </li>
+        <li class="song" id="Obsessed">
+            <img src="/Volumes/HargunSD/pics/obess.png" alt="Song 2">
+            <div class="song-info">
+                <h2>Obsessed</h2>
+                <p>Riar Saab <i class="fa-regular fa-circle-play"></i></p>
+            </div>
+        </li>
+        <li class="song" id="East Side Flow">
+            <img src="/Volumes/HargunSD/pics/esf.png" alt="Song 2">
+            <div class="song-info">
+                <h2>East Side Flow</h2>
+                <p>Sidhu Moose Wala <i class="fa-regular fa-circle-play"></i></p>
+            </div>
+        </li>
+        <li class="song" id="Daaru Badnaam">
+            <img src="/Volumes/HargunSD/pics/darb.png" alt="Song 2">
+            <div class="song-info">
+                <h2>Daaru Badnaam</h2>
+                <p>Param Singh<i class="fa-regular fa-circle-play"></i></p>
+            </div>
+        </li>
+        <li class="song" id="Desi kalakaar">
+            <img src="/Volumes/HargunSD/pics/dk.png" alt="Song 2">
+            <div class="song-info">
+                <h2>Desi Kalakaar</h2>
+                <p>Yo Yo Honey Singh<i class="fa-regular fa-circle-play" ></i></p>
+            </div>
+        </li>
+        <li class="song" id="Wakhra swag">
+            <img src="/Volumes/HargunSD/pics/ws.png" alt="Song 2">
+            <div class="song-info">
+                <h2>Wakhra Swag</h2>
+                <p>Badshah <i class="fa-regular fa-circle-play" ></i></p>
+            </div>
+        </li>
+        <li class="song" id="3peg">
+            <img src="/Volumes/HargunSD/pics/3p.png" alt="Song 2">
+            <div class="song-info">
+                <h2>3 Peg </h2>
+                <p>Sharry Mann<i class="fa-regular fa-circle-play"></i></p>
+            </div>
+        </li>
+        <li class="song" id="No Love">
+            <img src="/Volumes/HargunSD/pics/nol.png" alt="Song 2">
+            <div class="song-info">
+                <h2>No Love</h2>
+                <p>Shubh<i class="fa-regular fa-circle-play" ></i></p>
+            </div>
+        </li>
+        <li class="song" id="Attraction">
+            <img src="/Volumes/HargunSD/pics/a.png" alt="Song 2">
+            <div class="song-info">
+                <h2>Attraction</h2>
+                <p>Sukha<i class="fa-regular fa-circle-play" ></i></p>
+            </div>
+        </li>
+        <li class="song" id="Dilwara">
+            <img src="/Volumes/HargunSD/pics/da.png" alt="Song 2">
+            <div class="song-info">
+                <h2>Dilwara</h2>
+                <p>The PropheC <i class="fa-regular fa-circle-play"></i></p>
+            </div>
+        </li>
+        
+    </ul>
+  </div>
+  <div class="songb" id="resiz"></div>
+</div>
+<div class="bottom">
+    <input type="range" name="range" id="MyPB" min="0"  value="0" max="100">
+    <div class="icons">
+        <i class="fa-solid fa-2x fa-backward-fast" id="previous"></i>
+        <i class="fa-regular fa-2x fa-circle-play" id="masterPlay"></i>
+        <i class="fa-solid fa-2x fa-forward-fast" id="next"></i>
+</div>
+</div>
+<script src="https://kit.fontawesome.com/67ae9b72c4.js" crossorigin="anonymous"></script>
+<script>
+console.log('Wecome To MusiO');
+let songIndex=0;
+let audioElement =new Audio('songs2/1.mp3');
+let masterPlay =document.getElementById('masterPlay');
+let MyPB =document.getElementById('MyPB');
+let songItems = Array.from(document.getElementsByClassName('songItem'));
+
+let songs =[
+    {songName: "Try Me",filePath: "songs2/2.mp3", coverPath: ''},
+    {songName: "Softy",filePath: "songs2/3.mp3", coverPath: "/Volumes/HargunSD/FEEProject/tryme.png"},
+    {songName: "Try Me",filePath: "songs2/4.mp3", coverPath: "Ch.png"},
+    {songName: "Try Me",filePath: "songs2/5.mp3", coverPath: "/Volumes/HargunSD/FEEProject/tryme.png"},
+    {songName: "Try Me",filePath: "songs2/6.mp3", coverPath: "/Volumes/HargunSD/FEEProject/tryme.png"},
+    {songName: "Try Me",filePath: "songs2/7.mp3", coverPath: "/Volumes/HargunSD/FEEProject/tryme.png"},
+    {songName: "Try Me",filePath: "songs2/8.mp3", coverPath: "/Volumes/HargunSD/FEEProject/tryme.png"},
+    {songName: "Try Me",filePath: "songs2/9.mp3", coverPath: "/Volumes/HargunSD/FEEProject/tryme.png"},
+    {songName: "Try Me",filePath: "songs2/10.mp3", coverPath: "/Volumes/HargunSD/FEEProject/tryme.png"},
+    
+
+]
+
+masterPlay.addEventListener('click', ()=>{
+    if(audioElement.paused || audioElement.currentTime <=0){
+        audioElement.play();
+        masterPlay.classList.remove('fa-circle-play');
+        masterPlay.classList.add('fa-pause-circle');
+    }
+    else{
+        audioElement.pause();
+        masterPlay.classList.add('fa-circle-play');
+        masterPlay.classList.remove('fa-pause-circle');
+    }
+
+})
+document.getElementById('next').addEventListener('click', ()=>{
+    if(songIndex>=10){
+        songIndex = 0
+    }
+    else{
+        songIndex += 1;
+        MyPB.value =0
+
+    }
+    audioElement.src = `songs2/${songIndex+1}.mp3`;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+
+})
+
+document.getElementById('previous').addEventListener('click', ()=>{
+    if(songIndex<=0){
+        songIndex = 0
+    }
+    else{
+        songIndex -= 1;
+        MyPB.value =0
+    }
+    audioElement.src = `songs2/${songIndex+1}.mp3`;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+})
+
+audioElement.addEventListener('timeupdate', ()=>{
+    Progress = parseInt((audioElement.currentTime/audioElement.duration) * 100);
+    MyPB.value=Progress;
+})
+
+
+MyPB.addEventListener('change', ()=>{
+    audioElement.currentTime = MyPB.value * audioElement.duration /100;
+})
+
+document.getElementById('searchInput').addEventListener('input', function() {
+        var searchInput = this.value.toLowerCase();
+        var items = document.querySelectorAll('#songsls li');
+    
+        items.forEach(function(item) {
+            var itemName = item.textContent.toLowerCase();
+    
+            if (itemName.includes(searchInput)) {
+                item.style.display = 'block';
+                document.getElementById('resiz').style.height="320px";
+            } else {
+                item.style.display = 'none';
+               
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

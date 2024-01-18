@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>MusicO</title>
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1 id="ht" >Welcome to MusicO</h1>
+					<p id="hdes" >"Music can change the world because it can change people."</p>
+					<a id="reg" href="/Users/hargundeepsingh/vscode/home.html">Already User Login </a>
+				</div>
+			</div>
+		</div>
+        <div class="form-container log-out-container">
+			<form action="/Users/hargundeepsingh/vscode/nav.html">
+				<i id="languageButton" class="fa-solid fa-language fa-xl" style="padding-bottom: 35px; padding-left: 330px; cursor: pointer;"></i>
+				<h1 id="mtt">Register</h1>
+				<div class="social-container">
+					<a href="" class="social"><i class="fa fa-apple fa-2x"></i></a>
+					<a href="#" class="social"><i class="fab fa fa-google fa-2x"></i></a>
+				</div>
+				<span id="spant" >Enter Your Details</span>
+                <input type="text" placeholder="Name" required>
+				<input type="email" placeholder="Email" required/>
+				<input type="password" placeholder="Password" required/>
+				
+				<button id="bl">Register</button>
+
+			</form>
+		</div>
+	</div>
+	<script>
+		const languages = {
+	 en: {
+	   mtt:"Register",
+	   bl:"Register",
+	   spant:"Enter Your Details",
+	   ht:"Welcome to MusicO",
+	   hdes:"Music can change the world because it can change people.",
+	   reg:"Already User Login"
+
+
+	   
+
+	 },
+	 hi: {
+	   mtt:"रजिस्टर",
+	   bl:"रजिस्टर करवाना",
+	   spant:"अपना विवरण दर्ज करें",
+	   ht:"म्यूजिकओ में आपका स्वागत है",
+	   hdes:"संगीत दुनिया को बदल सकता है क्योंकि यह लोगों को बदल सकता है।",
+	   reg:"उपयोगकर्ता पहले से ही लॉगिन है"
+	 }
+   };
+   
+   
+   let currentLanguage = "en";
+   
+  
+   function updateContent() {
+	 document.getElementById("mtt").textContent = languages[currentLanguage].mtt;
+	 document.getElementById("spant").textContent = languages[currentLanguage].spant;
+	 document.getElementById("bl").textContent = languages[currentLanguage].bl;
+	 document.getElementById("ht").textContent = languages[currentLanguage].ht;
+	 document.getElementById("hdes").textContent = languages[currentLanguage].hdes;
+	 document.getElementById("reg").textContent = languages[currentLanguage].reg;
+	 
+   }
+   
+
+   function toggleLanguage() {
+	 currentLanguage = (currentLanguage === "en") ? "hi" : "en";
+	 updateContent();
+   }
+   
+  
+   updateContent();
+   
+  
+   document.getElementById("languageButton").addEventListener("click", toggleLanguage);
+   </script>
+   <script src="https://kit.fontawesome.com/67ae9b72c4.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
